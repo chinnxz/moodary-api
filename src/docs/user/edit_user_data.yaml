@@ -1,0 +1,43 @@
+Edit user data
+---
+tags:
+  - User
+
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "username"
+        - "name"
+        - "surname"
+        - "phone_number"
+        - "email"
+        - "password"
+      properties:
+        username:
+          type: "string"
+          example: "chinnxz"
+        name:
+          type: "string"
+          example: "chinnxz"
+        surname:
+          type: "string"
+          example: "chinnxz"
+        phone_number:
+          type: "string"
+          example: "0854879547"
+        email:
+          type: "string"
+          example: "chinnxz"
+        password:
+          type: "string"
+          example: "chinnxz"
+
+responses:
+  200:
+    description: Successful edited

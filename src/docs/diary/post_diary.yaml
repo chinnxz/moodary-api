@@ -1,0 +1,39 @@
+Add a new diary
+---
+tags:
+  - Diary
+
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - in: body
+    name: body
+    description: The body should contain the user Diary data
+    required: true
+    schema:
+      type: object
+      required:
+        - "mood"
+        - "level"
+        - "note"
+        - "hashtags"
+      properties:
+        mood:
+          type: "integer"
+          example: 5
+        level:
+          type: "string"
+          example: "medium"
+        note:
+          type: "string"
+          example: "its rainy today"
+        hashtags:
+          type: "string[]"
+          example: ["socool", "coolheart"]
+responses:
+  201:
+    description: Diary created
+
+  401:
+    description: Fails to get items due to authentication error

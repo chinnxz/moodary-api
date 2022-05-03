@@ -1,0 +1,32 @@
+GET monthly moods stats of user
+---
+tags:
+  - Diary
+
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - in: body
+    name: body
+    description: The body should contain month and year data
+    required: true
+    schema:
+      type: object
+      required:
+        - "month"
+        - "year"
+      properties:
+        month:
+          type: "string"
+          example: "05"
+        year:
+          type: "string"
+          example: "2022"
+
+responses:
+  200:
+    description: Return mood monthly stats of user
+
+  401:
+    description: Fails to get items due to authentication error

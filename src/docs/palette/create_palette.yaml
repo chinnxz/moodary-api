@@ -1,0 +1,35 @@
+Create a palette for user
+---
+tags:
+  - Palette
+
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - in: body
+    description: The body should contain the user Palette data
+    required: true
+    schema:
+      type: object
+      required:
+        - "color"
+      properties:
+        colors:
+          type: "array"
+          items:
+            type: object
+            properties:
+              code:
+                type: "string"
+                example: "FB7800"
+              mood:
+                type: "integer"
+                example: 1
+
+responses:
+  200:
+    description: Return the list of colors in palette
+
+  404:
+    description: Cannot create palette
