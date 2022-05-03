@@ -1,0 +1,32 @@
+Get a list of hashtags from suggestion model
+---
+tags:
+  - Diary
+
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - in: body
+    name: body
+    description: The body should contain the user Diary data
+    required: true
+    schema:
+      type: object
+      required:
+        - "mood"
+        - "level"
+      properties:
+        mood:
+          type: "integer"
+          example: 5
+        level:
+          type: "integer"
+          example: 2
+
+responses:
+  200:
+    description: Return the list of suggested hashtags
+
+  404:
+    description: Not found the list of hashtags

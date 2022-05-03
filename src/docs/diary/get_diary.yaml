@@ -1,0 +1,22 @@
+Get a diary by date
+---
+tags:
+  - Diary
+
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - in: query
+    name: date
+    schema:
+      type: string
+    description: The date that user want to see the diary
+    example: "16-05-2022"
+
+responses:
+  200:
+    description: Return the diary data
+
+  404:
+    description: Not found the diary

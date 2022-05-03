@@ -1,0 +1,15 @@
+Get all user palettes
+---
+tags:
+  - Palette
+
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+
+responses:
+  200:
+    description: Return the list of palettes
+  404:
+    description: Cannot find palette

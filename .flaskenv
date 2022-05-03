@@ -1,0 +1,5 @@
+export FLASK_ENV=development
+export FLASK_APP=src
+export SQLALCHEMY_DATABASE_URI=postgres://jxqrqoqashfxvj:11f6a34b27a8b48310c0e77975f6e1f2850831bbec06af07c555883ea2f0f5e3@ec2-54-80-123-146.compute-1.amazonaws.com:5432/d9plgr623h3um
+export SQLALCHEMY_TRACK_MODIFICATIONS=False
+export JWT_SECRET_KEY='JWT_SECRET_KEY'

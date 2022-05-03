@@ -1,0 +1,28 @@
+Get monthly mood analysis result
+---
+tags:
+  - Result
+
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - in: body
+    name: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "month"
+        - "year"
+      properties:
+        month:
+          type: "string"
+          example: "05"
+        year:
+          type: "string"
+          example: "2022"
+
+responses:
+  200:
+    description: Return the monthly mood analysis result
